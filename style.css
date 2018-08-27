@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "Muse";
+  src: url("assets/fonts/MuseoSansCyrl_500-webfont.woff2") format("woff2"), url("assets/fonts/MuseoSansCyrl_500-webfont.woff") format("woff");
+  font-weight: 800;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("assets/fonts/Gilroy-ExtraBold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("assets/fonts/Gilroy-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal; }
+
+html, body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+div, article {
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  cursor: pointer; }
+
+h1, h2, h3, h4, h5, p, span, ul {
+  margin: 0;
+  padding: 0; }
+
+a:focus, button:focus {
+  outline: none; }
+
+html, body {
+  box-sizing: border-box; }
+
+.wrapper {
+  max-width: 1140px;
+  margin: 0 auto; }
+
+/* position, z-index, top, left */
+/* display, border, paddin, margin, width, height */
+/* text-align, color, text-decoration */
+/* box-shadow, background, transform  */
+/* counter-reset, will-change */
+.main-container {
+  height: 100vh;
+  position: relative;
+  display: flex; }
+  .main-container:after {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: 'english yes';
+    display: inline-block;
+    font-size: 18.4vw;
+    letter-spacing: 9px;
+    color: rgba(0, 0, 0, 0.1);
+    font-family: "Gilroy";
+    font-weight: 800;
+    white-space: nowrap; }
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between; }
+  .header__logo {
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #e4002b;
+    font-family: "Muse"; }
+  .header__list {
+    list-style-type: none; }
+    .header__list--item {
+      display: inline-block;
+      font-family: "Gilroy";
+      font-size: 18px; }
+    .header__list--link {
+      font-family: "Muse"; }
