@@ -8,7 +8,7 @@
 @font-face {
   font-family: "Gilroy";
   src: url("assets/fonts/Gilroy-ExtraBold.otf") format("opentype");
-  font-weight: 800;
+  font-weight: 900;
   font-style: normal;
 }
 
@@ -18,3 +18,6 @@
   font-weight: 300;
   font-style: normal;
 }
+
+$Gilroy: "Gilroy";
+$Muse: "Muse";

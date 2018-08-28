@@ -1,4 +1,76 @@
+@import "fonts.scss";
+@import "colors.scss";
+
 .wrapper {
   max-width: 1140px;
   margin: 0 auto;
+}
+
+.link {
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  font-family: $Gilroy;
+  font-weight: 300;
+  cursor: pointer;
+
+  &--black {
+    color: $black;
+  }
+}
+
+.line {
+  margin: 0;
+  border: 0;
+  width: 64px;
+  height: 7px;
+  background-color: $red-dark;
+}
+
+.button {
+  border: 1px solid rgba(0,0,0,0.2);
+  padding: 25px 25px;
+
+  text-align: center;
+  color: #ffffff;
+
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  font-family: $Gilroy;
+  font-weight: 800;
+
+  border-radius: 35px;
+  box-shadow: 0 10px 19px 0 rgba(246,27,60,0.55);
+  background-color: $red-button;
+
+  &:hover, &:focus, &:active {
+    box-shadow: 0 10px 19px 0 rgba(246,27,60,0.55), 0 10px 19px 0 rgba(246,27,60,0.55);
+  }
+}
+
+.button-link {
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid $red-light;
+
+  color: rgb(245,17,44);
+
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  font-family: $Gilroy;
+  font-weight: 300;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.section__title {
+  text-transform: uppercase;
+
+  font-size: 45px;
+  letter-spacing: 2px;
+  color: rgb(0,0,0);
+  font-family: $Gilroy;
+  font-weight: 800;
 }

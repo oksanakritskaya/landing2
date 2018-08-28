@@ -1,0 +1,5 @@
+/* position, z-index, top, left */
+/* display, border, padding, margin, width, height */
+/* text-align, color, text-decoration */
+/* box-shadow, background, transform  */
+/* counter-reset, will-change */
