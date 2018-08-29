@@ -3,8 +3,14 @@
 
 @import "normalize.scss";
 @import "components.scss";
+@import "mixins.scss";
 
 $url: "./assets/images/";
+
+html {
+  font-size: 18px;
+}
+
 
 .main-container {
 
@@ -18,21 +24,23 @@ $url: "./assets/images/";
     z-index: -10;
     top: 20px;
     left: 0;
+
     width: 100%;
-    content: 'english yes';
     display: inline-block;
-    //font-size: 372px;
-    font-size: 18.3vw;
-    letter-spacing: 9px;
+    content: 'english yes';
+
     color: rgba(0,0,0, 0.1);
-    font-family: $Gilroy;
-    font-weight: 800;
+    //font-size: 372px;
+    font: normal 800 18.3vw $Gilroy, Helvetica, sana-serif;
+    letter-spacing: 0.5rem;
     white-space: nowrap;
   }
 }
 
 .header {
   position: relative;
+  padding-bottom: 110px;
+
   width: 100%;
   height: 100%;
 
@@ -40,9 +48,9 @@ $url: "./assets/images/";
     position: absolute;
     top: 0;
     left: 0;
-
     margin: 0 auto;
     padding-top: 30px;
+
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
@@ -51,17 +59,12 @@ $url: "./assets/images/";
 
 
   &__logo {
-    font-size: 30px;
-    font-weight: 800;
-    font-family: $Muse;
-
-    &--dot {
-      color: #000000;
-    }
+    color: #000000;
+    font: normal 800 1.7rem $Muse, "Trebuchet MS", sana-serif;
 
     &--text {
       color: $red-dark;
-      letter-spacing: 2px;
+      letter-spacing: 0.1rem;
     }
   }
 
@@ -69,19 +72,15 @@ $url: "./assets/images/";
     list-style-type: none;
 
     &--item {
-      display: inline-block;
       margin-right: 40px;
 
-      font-family: $Gilroy;
-      font-size: 18px;
+      display: inline-block;
+
+      font: normal 300 1rem $Gilroy, Halvetica, sana-serif;
 
       &:last-child {
         margin: 0;
       }
-    }
-
-    &--link {
-      font-family: $Muse;
     }
   }
 }
@@ -97,32 +96,62 @@ $url: "./assets/images/";
   &__img {
     /*height: 814px;
     width: 608px;*/
+    position: relative;
+
     height: 100%;
-    width: 50%;
-    flex: 0 0 60%;
-    background: transparent url($url + "bus.png") 50% 50% no-repeat;
-    background-size: cover;
+    width: auto;
+    flex: 0 0 52%;
+
+    background: transparent url($url + "bus.png") 50% 0 no-repeat;
+    background-size: contain;
+
+    &:after {
+      position: absolute;
+      bottom: 25rem;
+      left: 1.4rem;
+
+      display: block;
+      width: 86px;
+      height: 86px;
+      content: "";
+
+      background: transparent url($url + "icons/bagel.svg") 50% 50% no-repeat;
+    }
   }
   &__text {
-    flex: 0 0 40%;
+    padding-top: 80px;
+
+    flex: 0 0 48%;
   }
   &__title {
+    position: relative;
+
     margin-bottom: 30px;
     display: block;
     max-width: 490px;
 
     text-transform: uppercase;
-
-    font-size: 34px;
-    letter-spacing: 2px;
     color: rgb(0,0,0);
-    font-family: $Gilroy;
-    font-weight: 800;
+    font: normal 800 1.9rem $Gilroy, Helvetica, sana-serif;
+    letter-spacing: 0.1rem;
+
+    &:after {
+      position: absolute;
+      top: -3.4em;
+      right: 2.3em;
+
+      display: block;
+      width: 24px;
+      height: 24px;
+      content: "";
+
+      background: transparent url($url + "icons/circle.svg") 50% 50% no-repeat;
+    }
 
     &--strong {
       display: block;
 
-      font-size: 45px;
+      font-size: 2.5rem; //45px
     }
   }
 
@@ -131,14 +160,26 @@ $url: "./assets/images/";
   }
 
   &__description {
+    position: relative;
+
     margin-bottom: 100px;
 
-    font-size: 18px;
-    letter-spacing: 1px;
-    line-height: 24px;
     color: rgb(20,20,20);
-    font-family: $Gilroy;
-    font-weight: 300;
+    font: normal 300 1rem/1.3 $Gilroy, Helvetica, sana-serif;
+    letter-spacing: 1px;
+
+    &:after {
+      position: absolute;
+      bottom: -3.2rem;
+      right: 9em;
+
+      display: block;
+      width: 145px;
+      height: 19px;
+      content: "";
+
+      background: transparent url($url + "icons/wave.svg") 50% 50% no-repeat;
+    }
 
     &--item {
       display: block;
@@ -168,38 +209,24 @@ $url: "./assets/images/";
 
 
   &__title {
-    position: relative;
     max-width: 360px;
-
-    &:after {
-      position: absolute;
-      z-index: 0;
-      top: -115px;
-      right: -83px;
-      content: '?';
-      display: inline-block;
-      //font-size: 372px;
-      font-size: 16vw;
-      letter-spacing: 9px;
-      color: rgba(0,0,0, 0.1);
-      font-family: $Gilroy;
-      font-weight: 800;
-    }
   }
   &__list {
 
   }
 
   &__item {
-    padding: 0 0 0 347px;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: flex-end;
     align-items: center;
 
     &:nth-child(even) {
-      padding: 0 213px 0 0;
-
       flex-flow: row-reverse nowrap;
+
+      .situation__item--text {
+        max-width: 311px;
+      }
       .situation__item--img {
         margin: 0 35px 0 0;
       }
@@ -268,7 +295,7 @@ $url: "./assets/images/";
     &:nth-child(4) {
       .situation__item--img-wrapper {
         &:before, &:after {
-          top: 70px;
+          top: 45px;
         }
         &:before {
           content: "в итоге...";
@@ -285,12 +312,11 @@ $url: "./assets/images/";
     }
 
     &--text {
-      font-size: 18px;
-      letter-spacing: 1px;
-      line-height: 28px;
+      max-width: 396px;
+
       color: rgb(27,27,27);
-      font-family: $Gilroy;
-      font-weight: 300;
+      font: normal 300 1rem/1.6 $Gilroy, Helvetica, sana-serif;
+      letter-spacing: 0.1rem;
     }
 
     &--img-wrapper {
@@ -299,11 +325,8 @@ $url: "./assets/images/";
       &:before, &:after {
         position: absolute;
 
-        font-size: 48px;
-        letter-spacing: 2px;
-        line-height: 28px;
-        font-family: $Gilroy;
-        font-weight: 800;
+        font: normal 800 2.7rem/1.6 $Gilroy, Helvetica, sana-serif;
+        letter-spacing: 0.1rem;
       }
 
       &:before {
@@ -323,24 +346,34 @@ $url: "./assets/images/";
 
 .about-us {
   position: relative;
+  padding-bottom: 155px;
+  margin-top: -80px;
 
+  display: flex;
+  flex-flow: row nowrap;
   overflow: hidden;
-  padding: 160px 0 155px;
 
-  &:after {
+  &__img {
     position: absolute;
     top: 0;
-    right: -120px;
-    content: "";
+    right: -30%;
+    //margin-right: -470px;
 
-    display: block;
-    width: 1018px;
-    height: 608px;
+    display: inline-block;
+    /*width: 1018px;
+    height: 608px;*/
+    width: 100%;
+    height: 100%;
 
     background: transparent url($url + "about.png") 50% 50% no-repeat;
     background-size: contain;
   }
 
+  &__wrapper {
+    padding: 160px 350px 0 0;
+
+    width: 100%;
+  }
   &__title {
     max-width: 495px;
     margin-bottom: 38px;
@@ -360,11 +393,9 @@ $url: "./assets/images/";
 
     margin-right: 30px;
 
-    font-size: 18px;
-    letter-spacing: 1px;
-    line-height: 28px;
     color: rgb(20,20,20);
-    font-family: $Gilroy;
+    font: normal 300 1rem/1.6 $Gilroy, Helvetica, sana-serif;
+    letter-spacing: 0.1rem;
 
     &:last-child {
       margin: 0;
@@ -392,10 +423,6 @@ $url: "./assets/images/";
         background-color: #f5f5f5;
       }
     }
-
-    &--description {
-      font-weight: 300;
-    }
   }
 }
 
@@ -414,23 +441,31 @@ $url: "./assets/images/";
   }
 
   &__item {
-    padding: 0 10px;
-    font-size: 18px;
-    letter-spacing: 1px;
-    line-height: 24px;
+    margin: 0 15px;
+
+    width: calc((100% / 3) - 30px);
+
     color: rgb(20,20,20);
-    font-family: $Gilroy;
+    font: normal 300 0.8rem/1.3 $Gilroy, Helvetica, sana-serif;
+    letter-spacing: 0.1rem;
 
     &:first-child {
-      padding: 0 10px 0 0;
+      margin: 0 15px 0 0;
+
+      width: calc((100% / 3) - 15px);
     }
 
     &:last-child{
-      padding: 0 0 0 10px;
+      margin: 0 0 0 15px;
+
+      width: calc((100% / 3) - 15px);
     }
 
     &--img {
       margin-bottom: 30px;
+
+      width: 100%;
+      height: 65%;
     }
 
     &--title {
@@ -438,19 +473,34 @@ $url: "./assets/images/";
 
       display: block;
 
+      font-size: 1rem;
       font-weight: 900;
-    }
-
-    &--description {
-      font-weight: 300;
     }
   }
 }
 
 .timetable {
 
+  &__wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &__img {
+    width: 749px;
+    height: 1078px;
+    /*height: 100%;
+    width: auto;*/
+    flex: 0 0 34.5%;
+    background: transparent url($url + "bigben.png") 50% 0 no-repeat;
+    background-size: contain;
+  }
+  &__text {
+    flex: 0 0 65.5%;
+  }
+
   &__title {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   &__line {
@@ -458,21 +508,51 @@ $url: "./assets/images/";
   }
 
   &__price {
-    margin-bottom: 25px;
+    display: block;
+    margin-bottom: 10px;
 
-    font-size: 45px;
-    letter-spacing: 2px;
     color: rgb(245,17,44);
-    font-family: $Gilroy;
-    font-weight: 300;
+    font: normal 300 2.5rem $Gilroy, Helvetica, sana-serif;
   }
 
   &__description {
-    font-size: 18px;
-    letter-spacing: 1px;
-    line-height: 28px;
+    max-width: 700px;
+    margin-bottom: 30px;
+
     color: rgb(20,20,20);
-    font-family: $Gilroy;
-    font-weight: 300;
+    font: normal 300 1rem/1.6 $Gilroy, Helvetica, sana-serif;
+    letter-spacing: 0.1rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &__item {
+    margin-right: 30px;
+
+    max-width: 390px;
+    width: calc(50% - 30px);
+
+    color: rgb(20,20,20);
+    font: normal 300 1rem/1.6 $Gilroy, Helvetica, sana-serif;
+    letter-spacing: 0.1rem;
+
+    &:last-child {
+      margin: 0 0 0 30px;
+    }
+    &--title {
+      margin-bottom: 5px;
+
+      font-weight: 900;
+    }
+    .section-title--question:after {
+      top: 0;
+    }
+
+    &--description {
+      margin-bottom: 25px;
+    }
   }
 }

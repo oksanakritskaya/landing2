@@ -1,0 +1,5 @@
+@mixin G_font($value, $line) {
+  font-size: $value; //1rem; //18px
+  line-height: 1.3rem;
+  font-family: $Gilroy;
+}

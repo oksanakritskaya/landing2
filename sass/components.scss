@@ -2,16 +2,13 @@
 @import "colors.scss";
 
 .wrapper {
-  max-width: 1140px;
+  max-width: 75%;
   margin: 0 auto;
 }
 
 .link {
-  font-size: 16px;
-  letter-spacing: 1px;
-  line-height: 24px;
-  font-family: $Gilroy;
-  font-weight: 300;
+  font: normal 300 1.1rem/1.5 $Gilroy, Helvetica, sana-serif;
+
   cursor: pointer;
 
   &--black {
@@ -34,17 +31,15 @@
   text-align: center;
   color: #ffffff;
 
-  font-size: 18px;
-  letter-spacing: 1px;
-  line-height: 24px;
-  font-family: $Gilroy;
-  font-weight: 800;
+  font: normal 800 1rem/1.3 $Gilroy, Helvetica, sana-serif;
+  letter-spacing: 0.1rem;
 
   border-radius: 35px;
   box-shadow: 0 10px 19px 0 rgba(246,27,60,0.55);
-  background-color: $red-button;
+  background-color: #f5112b;
 
   &:hover, &:focus, &:active {
+    background-color: $red-button;
     box-shadow: 0 10px 19px 0 rgba(246,27,60,0.55), 0 10px 19px 0 rgba(246,27,60,0.55);
   }
 }
@@ -56,21 +51,34 @@
 
   color: rgb(245,17,44);
 
-  font-size: 18px;
-  letter-spacing: 1px;
-  line-height: 24px;
-  font-family: $Gilroy;
-  font-weight: 300;
+  font: normal 300 1rem/1.3 $Gilroy, Helvetica, sana-serif;
+  letter-spacing: 0.1rem;
+
   background-color: transparent;
   cursor: pointer;
 }
 
-.section__title {
+.section-title {
+  display: inline-block;
+
   text-transform: uppercase;
 
-  font-size: 45px;
-  letter-spacing: 2px;
   color: rgb(0,0,0);
-  font-family: $Gilroy;
-  font-weight: 800;
+  font: normal 800 2.5rem/1.2 $Gilroy, Helvetica, sana-serif;
+  letter-spacing: 0.1rem;
+}
+.section-title--question {
+  position: relative;
+  &:after {
+    position: absolute;
+    z-index: 0;
+    top: -115px;
+    right: -70px;
+    content: '?';
+    display: inline-block;
+
+    color: rgba(0,0,0, 0.1);
+    font: normal 800 16.7rem $Gilroy, Helvetica, sana-serif;
+    //letter-spacing: 9px;
+  }
 }
