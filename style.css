@@ -75,7 +75,7 @@ body {
   font-style: normal; }
 
 .wrapper {
-  max-width: 60%;
+  max-width: 1140px;
   margin: 0 auto; }
 
 .link {
@@ -179,12 +179,12 @@ html {
     content: 'english yes';
     color: rgba(0, 0, 0, 0.1);
     font: normal 800 18.3vw "Gilroy", Helvetica, sana-serif;
-    letter-spacing: 0.5rem;
+    letter-spacing: 9px;
     white-space: nowrap; }
 
 .header {
   position: relative;
-  padding-bottom: 110px;
+  padding-bottom: 95px;
   width: 100%;
   height: 100%; }
   .header__wrapper {
@@ -192,18 +192,23 @@ html {
     top: 0;
     left: 0;
     margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 25px;
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between; }
   .header__logo {
-    color: #000000;
-    font: normal 800 1.7rem "Muse", "Trebuchet MS", sana-serif; }
+    color: #000000; }
+    .header__logo--dot, .header__logo--text {
+      display: inline;
+      font: normal 800 48px "Muse", "Trebuchet MS", sana-serif; }
     .header__logo--text {
       color: #f5112c;
-      letter-spacing: 0.1rem; }
+      letter-spacing: 2px; }
   .header__list {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
     list-style-type: none; }
     .header__list--item {
       margin-right: 40px;
@@ -221,7 +226,7 @@ html {
     height: 814px;
     width: 608px;
     position: relative;
-    flex: 0 0 52%;
+    flex: 0 0 54.5%;
     background: transparent url("./assets/images/d_bus.png") 50% 0 no-repeat;
     background-size: contain; }
     .main-block__img:after {
@@ -234,8 +239,8 @@ html {
       content: "";
       background: transparent url("./assets/images/icons/bagel.svg") 50% 50% no-repeat; }
   .main-block__text {
-    padding-top: 140px;
-    flex: 0 0 48%; }
+    padding-top: 205px;
+    flex: 0 0 45.5%; }
   .main-block__title {
     position: relative;
     margin-bottom: 30px;
@@ -243,9 +248,9 @@ html {
     max-width: 490px;
     text-transform: uppercase;
     color: black;
-    font: normal 800 1.9rem "Gilroy", Helvetica, sana-serif;
-    letter-spacing: 0.1rem; }
-    .main-block__title:after {
+    font: normal 800 34px "Gilroy", Helvetica, sana-serif;
+    letter-spacing: 2px; }
+    .main-block__title:before {
       position: absolute;
       top: -3.4em;
       right: 2.3em;
@@ -255,8 +260,9 @@ html {
       content: "";
       background: transparent url("./assets/images/icons/circle.svg") 50% 50% no-repeat; }
     .main-block__title--strong {
+      margin-top: 5px;
       display: block;
-      font-size: 2.5rem; }
+      font-size: 45px; }
   .main-block__line {
     margin-bottom: 20px; }
   .main-block__description {
@@ -280,7 +286,7 @@ html {
 .situation {
   position: relative;
   overflow: hidden;
-  padding: 120px 0 220px; }
+  padding: 165px 0 215px; }
   .situation:after {
     position: absolute;
     top: 0;
@@ -311,7 +317,7 @@ html {
     .situation__item:nth-child(1) {
       margin-bottom: 80px; }
       .situation__item:nth-child(1) .situation__item--number {
-        top: 60px;
+        top: 48px;
         right: 419px; }
       .situation__item:nth-child(1) .situation__item--text {
         position: relative;
@@ -335,12 +341,12 @@ html {
           content: "";
           border-left: 1px solid rgba(0, 0, 0, 0.1); }
     .situation__item:nth-child(2) .situation__item--number {
-      top: 32px;
+      top: 22px;
       left: 400px; }
     .situation__item:nth-child(3) {
       margin-top: -60px; }
       .situation__item:nth-child(3) .situation__item--number {
-        top: 145px;
+        top: 128px;
         right: 300px; }
       .situation__item:nth-child(3) .situation__item--text {
         position: relative; }
@@ -355,8 +361,8 @@ html {
           content: "";
           background: transparent url("./assets/images/icons/circle.svg") 50% 50% no-repeat; }
     .situation__item:nth-child(4) .situation__item--number {
-      top: 58px;
-      left: 525px; }
+      top: 53px;
+      left: 522px; }
     .situation__item--number {
       position: absolute;
       top: 0;
@@ -385,34 +391,25 @@ html {
       margin: 0 0 0 35px; }
 
 .about-us {
-  margin-top: -100px;
+  margin-top: -70px;
+  padding: 225px 0 238px;
   display: flex;
   flex-flow: row nowrap;
   overflow: hidden; }
-  .about-us__img {
-    margin-right: -26%;
-    margin-left: -8%;
-    display: inline-block;
-    /*width: 1018px;
-    height: 608px;*/
-    width: auto;
-    height: 100%;
-    flex: 0 1 86%;
-    background: transparent url("./assets/images/d_about.png") 50% 50% no-repeat;
-    background-size: contain; }
   .about-us__wrapper {
+    padding-right: 270px;
+    position: relative;
     width: 100%;
-    display: flex;
-    flex-flow: row nowrap; }
-  .about-us__text {
-    flex: 0 0 59%;
-    padding: 240px 0 250px; }
+    /*display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;*/ }
   .about-us__title {
-    max-width: 495px;
-    margin-bottom: 38px; }
+    margin-bottom: 96px;
+    max-width: 495px; }
   .about-us__line {
     margin-bottom: 70px; }
   .about-us__list {
+    padding-left: 20px;
     display: flex;
     flex-flow: row nowrap; }
   .about-us__item {
@@ -438,63 +435,73 @@ html {
         height: 50px;
         border-radius: 22px;
         background-color: #f5f5f5; }
+  .about-us__img {
+    position: absolute;
+    top: -245px;
+    right: -502px;
+    /*margin-right: -50%;
+    margin-left: -10%;*/
+    display: block;
+    width: 1018px;
+    height: 608px;
+    /*width: auto;
+    height: 100%;*/
+    background: transparent url("./assets/images/d_about.png") 50% 50% no-repeat;
+    background-size: contain; }
 
 .instructors {
-  padding-bottom: 80px; }
+  padding-bottom: 75px; }
   .instructors__title {
-    margin-bottom: 60px; }
+    margin-bottom: 48px; }
   .instructors__list {
     display: flex;
     flex-flow: row nowrap;
     list-style-type: none; }
   .instructors__item {
     margin: 0 15px;
-    width: calc((100% / 3) - 30px);
+    width: calc((100% / 3) - 20px);
     color: #141414;
-    font: normal 300 0.8rem/1.3 "Gilroy", Helvetica, sana-serif;
-    letter-spacing: 0.1rem; }
+    font: normal 300 0.8rem "Gilroy", Helvetica, sana-serif;
+    letter-spacing: 1px; }
     .instructors__item:first-child {
-      margin: 0 15px 0 0;
-      width: calc((100% / 3) - 15px); }
+      margin: 0 15px 0 0; }
     .instructors__item:last-child {
-      margin: 0 0 0 15px;
-      width: calc((100% / 3) - 15px); }
+      margin: 0 0 0 15px; }
     .instructors__item--img {
-      margin-bottom: 30px;
+      margin-bottom: 28px;
       width: 100%;
-      height: 65%; }
+      height: 60%; }
     .instructors__item--title {
       margin-bottom: 10px;
       display: block;
       font-size: 1rem;
       font-weight: 900; }
+    .instructors__item--description {
+      line-height: 1.7; }
 
 .timetable {
-  padding-bottom: 80px; }
-  .timetable__wrapper {
-    display: flex;
-    flex-flow: row nowrap; }
+  padding-bottom: 72px;
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden; }
   .timetable__img {
-    /*flex: 0 0 34.5%;
-    background: transparent url(./assets/images/bus.png) 50% 0 no-repeat;
-    background-size: contain;*/
-    width: 749px;
-    /*height: 100%;
-    width: auto;*/
-    flex: 0 0 34.5%;
+    width: 50%;
     background: transparent url("./assets/images/d_bigben.png") 50% 0 no-repeat;
-    background-size: contain; }
+    background-size: cover; }
+  .timetable__text {
+    padding: 135px 0 35px;
+    width: 100%; }
   .timetable__title {
     margin-bottom: 30px; }
   .timetable__line {
-    margin-bottom: 45px; }
+    margin-bottom: 45px;
+    max-width: 350px; }
   .timetable__price {
     display: block;
     margin-bottom: 10px;
     color: #f5112c;
     font: normal 300 2.5rem "Gilroy", Helvetica, sana-serif; }
   .timetable__description {
-    max-width: 700px;
     margin-bottom: 30px;
     color: #141414;
     font: normal 300 1rem/1.6 "Gilroy", Helvetica, sana-serif;
@@ -518,19 +525,48 @@ html {
       margin-bottom: 25px; }
 
 .methods {
-  padding-bottom: 50px; }
+  position: relative;
+  overflow: hidden;
+  padding: 57px 0 225px; }
+  .methods:before {
+    position: absolute;
+    top: 0;
+    right: -6%;
+    z-index: -10;
+    width: 110%;
+    height: 100%;
+    border-radius: 50%;
+    content: '';
+    background-color: #f8f8f8; }
+  .methods__title {
+    margin-bottom: 45px;
+    max-width: 350px; }
   .methods__item {
+    margin-bottom: 70px;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between; }
+    justify-content: space-between;
+    align-items: center; }
+    .methods__item:last-child {
+      margin: 0; }
     .methods__item:nth-child(even) {
       flex-flow: row-reverse nowrap; }
       .methods__item:nth-child(even) .methods__item--img {
         margin: 0 100px 0 0; }
     .methods__item--text {
+      position: relative;
+      padding-left: 35px;
       display: flex;
       flex-flow: column nowrap;
       max-width: 410px; }
+      .methods__item--text:before {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 13px;
+        height: 10px;
+        content: "";
+        background: transparent url("./assets/images/icons/arrow-right.svg") 50% 50% no-repeat; }
     .methods__item--img {
       position: relative;
       overflow: hidden;
@@ -540,5 +576,61 @@ html {
       height: 333px; }
       .methods__item--img img {
         position: absolute;
-        top: -120px;
-        left: -500px; }
+        top: 0;
+        left: 0; }
+    .methods__item:nth-child(1) .methods__item--img img {
+      top: -185px;
+      left: -400px; }
+    .methods__item:nth-child(2) .methods__item--img img {
+      top: -39px;
+      left: 4px; }
+    .methods__item:nth-child(3) .methods__item--img img {
+      top: -75px;
+      left: -17px; }
+    .methods__item:nth-child(4) .methods__item--img img {
+      top: -22px;
+      left: -44px; }
+
+.reviews {
+  position: relative;
+  padding: 100px 0 80px;
+  /*&:after {
+    position: absolute;
+    bottom: 0;
+    right: 20%;
+    //z-index: -10;
+    z-index: 10;
+
+    border: 50px solid red;
+
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+
+    content: '';
+    //background-color: #f8f8f8;
+  }*/ }
+  .reviews__title {
+    margin-bottom: 75px; }
+  .reviews__list {
+    overflow-x: auto;
+    display: flex;
+    flex-flow: row nowrap; }
+  .reviews__item {
+    padding: 0 8px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-flow: row nowrap; }
+    .reviews__item--img-wrapper {
+      position: relative;
+      overflow: hidden;
+      margin-right: 65px;
+      display: block;
+      height: 164px;
+      width: 164px; }
+    .reviews__item--img {
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .reviews__item--text {
+      max-width: 90%; }
