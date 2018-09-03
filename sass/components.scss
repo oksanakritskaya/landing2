@@ -7,14 +7,20 @@
   max-width: 1140px;
   margin: 0 auto;
 }
-
+.info-text {
+  font: normal 300 18px/24px $Gilroy;
+  letter-spacing: 1px;
+}
 .link {
-  font: normal 300 1.1rem/1.5 $Gilroy, Helvetica, sana-serif; // tel 18(24) 1 -- 16(24) 1 -- 14(24) 1
-
   cursor: pointer;
 
   &--black {
     color: $black;
+  }
+  &--red {
+    color: rgb(245,17,44);
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgb(245,17,44);
   }
 }
 
@@ -28,7 +34,8 @@
 
 .button {
   border: 1px solid rgba(0,0,0,0.2);
-  padding: 25px 25px;
+  padding: 25px 16px;
+  max-width: 365px;
 
   text-align: center;
   color: #ffffff;
@@ -102,4 +109,18 @@
 }
 .section__list--description {
   @include font_main();
+}
+
+.logo {
+  color: #000000;
+
+  &__dot, &__text {
+    display: inline;
+    font: normal 800 48px $Muse; //48() 2 -- 30() 2 -- 30() 2
+  }
+
+  &__text {
+    color: $red-dark;
+    letter-spacing: 2px;
+  }
 }

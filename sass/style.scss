@@ -29,9 +29,9 @@ html {
     display: inline-block;
     content: 'english yes';
 
-    color: rgba(0,0,0, 0.1);
+    color: rgba(233,233,233, 0.3);
     //font-size: 372px;
-    font: normal 800 18.3vw $Gilroy, Helvetica, sana-serif;
+    font: normal 800 18.3vw $Gilroy;
     letter-spacing: 9px;
     white-space: nowrap;
   }
@@ -57,21 +57,6 @@ html {
     justify-content: space-between;
   }
 
-
-  &__logo {
-    color: #000000;
-
-    &--dot, &--text {
-      display: inline;
-      font: normal 800 48px $Muse, "Trebuchet MS", sana-serif; //48() 2 -- 30() 2 -- 30() 2
-    }
-
-    &--text {
-      color: $red-dark;
-      letter-spacing: 2px;
-    }
-  }
-
   &__list {
     display: flex;
     flex-flow: row nowrap;
@@ -83,7 +68,7 @@ html {
 
       display: inline-block;
 
-      font: normal 300 1rem $Gilroy, Halvetica, sana-serif; // 18(24) 1 -- 16(24) 1 -- none
+      //font: normal 300 1rem $Gilroy; // 18(24) 1 -- 16(24) 1 -- none
 
       &:last-child {
         margin: 0;
@@ -112,8 +97,8 @@ html {
 
     &:after {
       position: absolute;
-      bottom: 25rem;
-      left: 1.4rem;
+      top: 44%;
+      left: -17%;
 
       display: block;
       width: 86px;
@@ -137,13 +122,13 @@ html {
 
     text-transform: uppercase;
     color: rgb(0,0,0);
-    font: normal 800 34px $Gilroy, Helvetica, sana-serif; //34() 2 -- 24() 1 -- 18() 1
+    font: normal 800 34px $Gilroy; //34() 2 -- 24() 1 -- 18() 1
     letter-spacing: 2px;
 
     &:before {
       position: absolute;
-      top: -3.4em;
-      right: 2.3em;
+      top: -49%;
+      right: 6%;
 
       display: block;
       width: 24px;
@@ -172,13 +157,13 @@ html {
     margin-bottom: 100px;
 
     color: rgb(20,20,20);
-    font: normal 300 1rem/1.3 $Gilroy, Helvetica, sana-serif; // 18(24) 1 -- 16(24) 1 -- 14(18) 1
+    font: normal 300 1rem/1.3 $Gilroy; // 18(24) 1 -- 16(24) 1 -- 14(18) 1
     letter-spacing: 1px;
 
     &:after {
       position: absolute;
-      bottom: -3.2rem;
-      right: 9em;
+      bottom: -102%;
+      right: 0;
 
       display: block;
       width: 145px;
@@ -214,6 +199,36 @@ html {
     background-color: #f8f8f8;
   }
 
+  &__wrapper {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      top: 61%;
+      left: 23%;
+      z-index: 1;
+
+      display: block;
+      width: 24px;
+      height: 24px;
+      content: "";
+
+      background: transparent url($url + "icons/circle.svg") 50% 50% no-repeat;
+    }
+
+    &:before {
+      position: absolute;
+      bottom: 16%;
+      left: 24%;
+      //z-index: 0;
+
+      display: block;
+      height: 70%;
+      content: "";
+
+      border-left: 1px solid rgba(0,0,0,0.1);
+    }
+  }
 
   &__title {
     max-width: 360px;
@@ -246,7 +261,9 @@ html {
 
     &:nth-child(1) {
       margin-bottom: 80px;
+      .situation__item--img {
 
+      }
       .situation__item--number {
         top: 48px;
         right: 419px;
@@ -255,12 +272,10 @@ html {
         position: relative;
 
         max-width: 282px;
-
         &:after {
           position: absolute;
-          bottom: -4rem;
-          right: -3.2rem;
-          z-index: 1;
+          bottom: -47%;
+          right: -21%;
 
           display: block;
           width: 145px;
@@ -268,19 +283,6 @@ html {
           content: "";
 
           background: transparent url($url + "icons/wave.svg") 50% 50% no-repeat;
-        }
-
-        &:before {
-          position: absolute;
-          top: 0;
-          left: -20.3rem;
-          //z-index: 0;
-
-          display: block;
-          height: 70rem;
-          content: "";
-
-          border-left: 1px solid rgba(0,0,0,0.1);
         }
       }
     }
@@ -299,24 +301,6 @@ html {
         top: 128px;
         right: 300px;
       }
-
-      .situation__item--text {
-        position: relative;
-
-        &:before {
-          position: absolute;
-          top: 0;
-          left: -21rem;
-          z-index: 1;
-
-          display: block;
-          width: 24px;
-          height: 24px;
-          content: "";
-
-          background: transparent url($url + "icons/circle.svg") 50% 50% no-repeat;
-        }
-      }
     }
 
     &:nth-child(4) {
@@ -331,7 +315,7 @@ html {
       right: 0;
 
       color: rgb(0,0,0);
-      font: normal 800 48px "Gilroy", Helvetica, sans-serif;
+      font: normal 800 48px $Gilroy;
       letter-spacing: 2px;
 
       &_strong {
@@ -351,7 +335,7 @@ html {
       &:before, &:after {
         position: absolute;
 
-        font: normal 800 2.7rem/1.6 $Gilroy, Helvetica, sana-serif;
+        font: normal 800 2.7rem/1.6 $Gilroy;
         letter-spacing: 0.1rem;
       }
 
@@ -371,6 +355,7 @@ html {
 }
 
 .about-us {
+  position: relative;
   margin-top: -70px;
   padding: 225px 0 238px;
   //margin-top: -220px;
@@ -378,6 +363,18 @@ html {
   display: flex;
   flex-flow: row nowrap;
   overflow: hidden;
+  &:after {
+    position: absolute;
+    bottom: 11%;
+    right: 31%;
+
+    display: block;
+    width: 145px;
+    height: 19px;
+    content: "";
+
+    background: transparent url($url + "icons/wave.svg") 50% 50% no-repeat;
+  }
 
   &__wrapper {
     padding-right: 270px;
@@ -411,7 +408,7 @@ html {
     margin-right: 30px;
 
     color: rgb(20,20,20);
-    font: normal 300 1rem/1.6 $Gilroy, Helvetica, sana-serif; // 18(28) 1 -- 16(24) 1 -- 14(24) 1
+    font: normal 300 1rem/1.6 $Gilroy; // 18(28) 1 -- 16(24) 1 -- 14(24) 1
     letter-spacing: 0.1rem;
 
     &:last-child {
@@ -460,7 +457,63 @@ html {
 }
 
 .instructors {
+  position: relative;
+
   padding-bottom: 75px;
+  &:before {
+    position: absolute;
+    top: -6%;
+    right: 8%;
+    z-index: -10
+  ;
+    border: 70px solid #f8f8f8;
+    width: 23%;
+    height: 61%;
+
+    border-radius: 50%;
+    content: '';
+  }
+  &:after {
+    position: absolute;
+    top: 37%;
+    right: 7%;
+
+    display: block;
+    width: 66px;
+    height: 34px;
+    content: "";
+
+    background: transparent url($url + "icons/waves.png") 50% 50% no-repeat;
+  }
+
+  &__wrapper {
+    position: relative;
+    &:before {
+      position: absolute;
+      top: 43%;
+      right: 15%;
+      z-index: -10;
+
+      display: block;
+      width: 120%;
+      content: "";
+
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    &:after {
+      position: absolute;
+      top: 41%;
+      left: -13%;
+
+      display: block;
+      width: 24px;
+      height: 24px;
+      content: "";
+
+      background: transparent url($url + "icons/circle.svg") 50% 50% no-repeat;
+    }
+  }
 
   &__title {
     margin-bottom: 48px;
@@ -479,7 +532,7 @@ html {
     width: calc((100% / 3) - 20px);
 
     color: rgb(20,20,20);
-    font: normal 300 0.8rem $Gilroy, Helvetica, sana-serif; // 14(24) 1 -- 14(24) 1 -- 14(18) 1
+    font: normal 300 0.8rem $Gilroy; // 14(24) 1 -- 14(24) 1 -- 14(18) 1
     letter-spacing: 1px;
 
     &:first-child {
@@ -498,7 +551,7 @@ html {
       margin-bottom: 28px;
 
       width: 100%;
-      height: 60%;
+      height: 55%;
     }
 
     &--title {
@@ -517,20 +570,67 @@ html {
 }
 
 .timetable {
+  position: relative;
   padding-bottom: 72px;
+
   display: flex;
   flex-flow: row nowrap;
   overflow: hidden;
 
+  &:before {
+    position: absolute;
+    top: 22%;
+    left: 6%;
+    z-index: -10;
+
+    border: 100px solid #f8f8f8;
+    width: 32%;
+    height: 53%;
+
+    border-radius: 50%;
+    content: '';
+  }
+
   &__img {
-    width: 50%;
+    position: relative;
+
+    width: 37%;
+
     background: transparent url($url + "d_bigben.png") 50% 0 no-repeat;
     background-size: cover;
+
+    &:before {
+      position: absolute;
+      top: 16%;
+      left: 23%;
+      z-index: -10;
+
+      border: 30px solid #2429ff;
+      width: 24%;
+      height: 16%;
+
+      border-radius: 50%;
+      content: '';
+    }
+
+    &:after {
+      position: absolute;
+      bottom: 29%;
+      right: -2%;
+
+      display: block;
+      width: 145px;
+      height: 19px;
+      content: "";
+
+      background: transparent url($url + "icons/wave.svg") 50% 50% no-repeat;
+    }
   }
   &__text {
     padding: 135px 0 35px;
+    margin-left: 4%;
 
-    width: 100%;
+    width: 40%;
   }
 
   &__title {
@@ -548,7 +648,7 @@ html {
     margin-bottom: 10px;
 
     color: rgb(245,17,44);
-    font: normal 300 2.5rem $Gilroy, Helvetica, sana-serif; // 45() 2 -- 30() 2 -- 24() 1
+    font: normal 300 2.5rem $Gilroy; // 45() 2 -- 30() 2 -- 24() 1
   }
 
   &__description {
@@ -556,7 +656,7 @@ html {
     margin-bottom: 30px;
 
     color: rgb(20,20,20);
-    font: normal 300 1rem/1.6 $Gilroy, Helvetica, sana-serif; //18(28) 1 -- 16(24) 1 -- 14(18) 1
+    font: normal 300 1rem/1.6 $Gilroy; //18(28) 1 -- 16(24) 1 -- 14(18) 1
     letter-spacing: 0.1rem;
   }
 
@@ -575,7 +675,7 @@ html {
     letter-spacing: 0.1rem;
 
     &:last-child {
-      margin: 0 0 0 30px;
+      margin: 0;
     }
     &--title {
       margin-bottom: 5px;
@@ -617,6 +717,7 @@ html {
 
   }
   &__item {
+    position: relative;
     margin-bottom: 70px;
 
     display: flex;
@@ -627,17 +728,9 @@ html {
     &:last-child {
       margin: 0;
     }
-
-    &:nth-child(even) {
-      flex-flow: row-reverse nowrap;
-
-      .methods__item--img {
-        margin: 0 100px 0 0;
-      }
-    }
     &--text {
       position: relative;
-      padding-left: 35px;
+      padding-left: 38px;
 
       display: flex;
       flex-flow: column nowrap;
@@ -645,8 +738,8 @@ html {
 
       &:before {
         position: absolute;
-        top: 10px;
-        left: 0;
+        top: 17px;
+        left: 3px;
 
         width: 13px;
         height: 10px;
@@ -658,7 +751,7 @@ html {
     &--img {
       position: relative;
       overflow: hidden;
-      margin-left: 100px;
+      margin-left: 73px;
 
       display: block;
       width: 555px;
@@ -669,8 +762,29 @@ html {
         left: 0;
       }
     }
+    &:nth-child(even) {
+      flex-flow: row-reverse nowrap;
+      justify-content: flex-end;
 
+      .methods__item--img {
+        margin: 0 73px 0 0;
+      }
+    }
+    &:nth-child(1):after, &:nth-child(2):after, &:nth-child(3):after, &:nth-child(4):after {
+      position: absolute;
+      z-index: -10;
+
+      font: normal 800 122px/72px $Gilroy;
+      letter-spacing: 6px;
+      color: rgba(233,233,233,0.5);
+    }
     &:nth-child(1) {
+      &:after {
+        top: 48px;
+        left: 178px;
+
+        content: "просто";
+      }
       .methods__item--img {
         img {
           top: -185px;
@@ -679,6 +793,24 @@ html {
       }
     }
     &:nth-child(2) {
+      &:after {
+        top: 72px;
+        right: 48px;
+
+        content: "общение";
+      }
+      &:before {
+        position: absolute;
+        top: -15%;
+        left: 4.5%;
+
+        display: block;
+        width: 24px;
+        height: 24px;
+        content: "";
+
+        background: transparent url($url + "icons/circle.svg") 50% 50% no-repeat;
+      }
       .methods__item--img {
         img {
           top: -39px;
@@ -687,6 +819,12 @@ html {
       }
     }
     &:nth-child(3) {
+      &:after {
+        top: 64px;
+        left: 215px;
+
+        content: "практика";
+      }
       .methods__item--img {
         img {
           top: -75px;
@@ -695,6 +833,25 @@ html {
       }
     }
     &:nth-child(4) {
+      &:before {
+        position: absolute;
+        top: -7%;
+        left: 45%;
+        z-index: 10;
+
+        border: 17px solid #2429ff;
+        width: 8%;
+        height: 24%;
+
+        border-radius: 50%;
+        content: '';
+      }
+      &:after {
+        top: 70px;
+        right: 148px;
+
+        content: "повтор";
+      }
       .methods__item--img {
         img {
           top: -22px;
@@ -707,23 +864,65 @@ html {
 .reviews {
   position: relative;
 
-  padding: 100px 0 80px;
-  /*&:after {
+  padding: 100px 0 154px;
+  &:before {
     position: absolute;
-    bottom: 0;
-    right: 20%;
-    //z-index: -10;
+    top: -32%;
+    right: 13%;
     z-index: 10;
 
-    border: 50px solid red;
+    border: 110px solid #f8f8f8;
 
-    width: 20%;
-    height: 20%;
+    width: 30%;
+    height: 65%;
     border-radius: 50%;
 
     content: '';
-    //background-color: #f8f8f8;
-  }*/
+  }
+  &:after {
+    position: absolute;
+    bottom: -3%;
+    right: 20%;
+
+    display: block;
+    width: 145px;
+    height: 19px;
+    content: "";
+
+    background: transparent url($url + "icons/wave.svg") 50% 50% no-repeat;
+  }
+
+
+  &__wrapper {
+    position: relative;
+    &:before {
+      position: absolute;
+      top: 29%;
+      right: 15%;
+      z-index: 10;
+
+      display: block;
+      width: 24px;
+      height: 24px;
+      content: "";
+
+      background: transparent url($url + "icons/circle.svg") 50% 50% no-repeat;
+    }
+
+    &:after {
+      position: absolute;
+      top: 13%;
+      right: -9%;
+      z-index: 10;
+
+      display: block;
+      width: 66px;
+      height: 34px;
+      content: "";
+
+      background: transparent url($url + "icons/waves.png") 50% 50% no-repeat;
+    }
+  }
 
   &__title {
     margin-bottom: 75px;
@@ -734,12 +933,29 @@ html {
     display: flex;
     flex-flow: row nowrap;
 
-    //white-space: nowrap;
+    &::-webkit-scrollbar-track
+    {
+      border-radius: 3px;
+      background-color: #e9e9e9;
+    }
+
+    &::-webkit-scrollbar
+    {
+      height: 7px;
+    }
+
+    &::-webkit-scrollbar-thumb
+    {
+      border-radius: 3px;
+      -webkit-box-shadow: 0px 4px 10px rgba(245,17,44,0.58);
+      background-color: #f5112c;
+    }
+
   }
   &__item {
-    padding: 0 8px;
+    padding-bottom: 70px;
 
-    flex: 0 0 auto;
+    flex: 0 0 100%;
     display: flex;
     flex-flow: row nowrap;
 
@@ -754,12 +970,182 @@ html {
     }
     &--img {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: -15px;
+      left: -70px;
     }
 
-    &--text {
-      max-width: 90%;
+    &--content {
+      max-width: 680px;
     }
+
+    &--name {
+      margin-bottom: 28px;
+
+      display: block;
+
+      line-height: 1;
+    }
+    &--text {
+      margin-bottom: 20px;
+    }
+  }
+}
+.promotion {
+  padding: 130px 0 190px;
+  display: flex;
+  flex-flow: row nowrap;
+
+  &__img-wrapper {
+    position: relative;
+    margin-right: 3%;
+
+    width: 50%;
+    overflow: hidden;
+
+    &:before {
+      position: absolute;
+      top: 1%;
+      right: 7%;
+
+      display: block;
+      width: 145px;
+      height: 19px;
+      content: "";
+
+      background: transparent url($url + "icons/wave.svg") 50% 50% no-repeat;
+    }
+    &:after {
+      position: absolute;
+      bottom: 0;
+      right: 25%;
+
+      display: block;
+      width: 24px;
+      height: 24px;
+      content: "";
+
+      background: transparent url($url + "icons/circle.svg") 50% 50% no-repeat;
+    }
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: -80%;
+
+    width: 280%;
+    height: 280%;
+    background: transparent url($url + "plane.png") 0 0 no-repeat;
+    background-size: contain;
+  }
+
+  &__content {
+    position: relative;
+    padding: 124px 0 40px;
+
+    width: 24%;
+    display: flex;
+    flex-flow: column nowrap;
+    &:before {
+      position: absolute;
+      top: 3%;
+      right: -16%;
+
+      display: block;
+      width: 10px;
+      height: 10px;
+      content: "";
+
+      background: transparent url($url + "icons/circle.svg") 50% 50% no-repeat;
+      background-size: contain;
+    }
+    &:after {
+      position: absolute;
+      top: 12%;
+      right: -8%;
+
+      display: block;
+      width: 24px;
+      height: 24px;
+      content: "";
+
+      background: transparent url($url + "icons/circle.svg") 50% 50% no-repeat;
+    }
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__description {
+    margin-bottom: 95px;
+
+    font: normal 300 16px/24px $Gilroy;
+    letter-spacing: 1px;
+  }
+}
+
+.footer {
+  padding: 70px 0 40px;
+
+  background-color: #f7f7f7;
+
+  &__wrapper {
+    width: 100%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  &__column {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    &:last-child {
+      align-items: flex-end;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 5px;
+  }
+
+  &__social {
+    margin-bottom: 15px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    &--item {
+      margin-right: 22px;
+      background-size: contain;
+      cursor: pointer;
+      &:last-child {
+        margin: 0;
+      }
+    }
+    .vk {
+      width: 40px;
+      height: 23px;
+      background: transparent url($url + "icons/vk.png") 50% 50% no-repeat;
+    }
+    .insta {
+      width: 28px;
+      height: 28px;
+      background: transparent url($url + "icons/insta.png") 50% 50% no-repeat;
+    }
+    .yt {
+      width: 27px;
+      height: 33px;
+      background: transparent url($url + "icons/yt.png") 50% 50% no-repeat;
+    }
+    .ok {
+      width: 19px;
+      height: 33px;
+      background: transparent url($url + "icons/ok.png") 50% 50% no-repeat;
+    }
+  }
+  &__tel {
+    margin-bottom: 15px;
   }
 }
