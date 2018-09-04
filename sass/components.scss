@@ -3,13 +3,20 @@
 @import "mixins.scss";
 
 .wrapper {
-  //max-width: 60%;
-  max-width: 1140px;
+  max-width: 60%;
+  //max-width: 1140px;
   margin: 0 auto;
+  @media (max-width:1300px) {
+    //max-width: 70%;
+    max-width: 720px;
+  }
 }
 .info-text {
   font: normal 300 18px/24px $Gilroy;
   letter-spacing: 1px;
+  @media (max-width: 1300px) {
+    font-size: 16px;
+  }
 }
 .link {
   cursor: pointer;
@@ -34,19 +41,23 @@
 
 .button {
   border: 1px solid rgba(0,0,0,0.2);
-  padding: 25px 16px;
-  max-width: 365px;
+  padding: 25px 20px;
+  max-width: 372px;
 
   text-align: center;
   color: #ffffff;
 
-  font: normal 800 1rem $Gilroy, Helvetica, sana-serif; // 18(24) 1 -- 14(24) 1 -- 14(24) 1
-  letter-spacing: 0.1rem;
+  font: normal 800 18px/24px $Gilroy, Helvetica, sana-serif; // 18(24) 1 -- 14(24) 1 -- 14(24) 1
+  letter-spacing: 1px;
 
   border-radius: 35px;
   box-shadow: 0 10px 19px 0 rgba(246,27,60,0.55);
   background-color: #f5112b;
+  @media (max-width: 1300px) {
+    padding: 18px 25px;
 
+    font-size: 14px;
+  }
   &:hover, &:focus, &:active {
     background-color: $red-button;
     box-shadow: 0 10px 19px 0 rgba(246,27,60,0.55), 0 10px 19px 0 rgba(246,27,60,0.55);
@@ -60,11 +71,17 @@
 
   color: rgb(245,17,44);
 
-  font: normal 300 1rem/1.3 $Gilroy, Helvetica, sana-serif; // 18(24) 1 -- 16(24) 1 -- 14(24) 1
-  letter-spacing: 0.1rem;
+  font: normal 300 18px/24px $Gilroy; // 18(24) 1 -- 16(24) 1 -- 14(24) 1
+  letter-spacing: 1px;
 
   background-color: transparent;
   cursor: pointer;
+  @media (max-width: 1300px) {
+    font-size: 16px;
+  }
+  @media (max-width: 320px) {
+    font-size: 14px;
+  }
 }
 
 .section-title, .section-title--line {
@@ -73,8 +90,15 @@
   text-transform: uppercase;
 
   color: rgb(0,0,0);
-  font: normal 800 2.5rem/1.2 $Gilroy, Helvetica, sana-serif; // 45() 2 -- 30() 2 -- 24() 1
-  letter-spacing: 0.1rem;
+  font: normal 800 45px $Gilroy, Helvetica, sana-serif;
+  letter-spacing: 2px;
+  @media (max-width: 1300px) {
+    font-size: 30px;
+  }
+  @media (max-width: 320px) {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
 }
 .section-title--line {
   position: relative;
@@ -83,7 +107,7 @@
     content: '';
     display: block;
     width: 64px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     border-bottom: 7px solid $red-dark;
   }
 }
@@ -98,8 +122,13 @@
     display: inline-block;
 
     color: rgba(0,0,0, 0.1);
-    font: normal 800 16.7rem $Gilroy, Helvetica, sana-serif;
-    //letter-spacing: 9px;
+    font: normal 800 300px $Gilroy;
+    @media (max-width: 1300px) {
+      top: -65px;
+      right: -40px;
+
+      font-size: 200px;
+    }
   }
 }
 
@@ -117,6 +146,9 @@
   &__dot, &__text {
     display: inline;
     font: normal 800 48px $Muse; //48() 2 -- 30() 2 -- 30() 2
+    @media (max-width: 1300px) {
+      font-size: 30px;
+    }
   }
 
   &__text {

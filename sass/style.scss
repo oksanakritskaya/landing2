@@ -12,7 +12,7 @@ html {
 }
 
 
-.main-container {
+.header {
 
   /*height: 100vh;*/
   position: relative;
@@ -35,16 +35,16 @@ html {
     letter-spacing: 9px;
     white-space: nowrap;
   }
-}
-
-.header {
-  position: relative;
-  padding-bottom: 95px;
-
-  width: 100%;
-  height: 100%;
 
   &__wrapper {
+    position: relative;
+    padding-bottom: 70px;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  &__menu {
     position: absolute;
     top: 0;
     left: 0;
@@ -82,18 +82,19 @@ html {
 
   display:flex;
   flex-flow: row nowrap;
-  align-items: center;
-
 
   &__img {
-
-    height: 814px;
-    width: 608px;
     position: relative;
-    flex: 0 0 54.5%;
+
+    width: 54%;
 
     background: transparent url($url + "d_bus.png") 50% 0 no-repeat;
     background-size: contain;
+    @media (max-width: 1300px) {
+      margin-left: -10%;
+
+      width: 55%;
+    }
 
     &:after {
       position: absolute;
@@ -109,14 +110,19 @@ html {
     }
   }
   &__text {
-    padding-top: 205px;
+    padding: 295px 0 120px;
 
-    flex: 0 0 45.5%;
+    width: 46%;
+    @media (max-width: 1300px) {
+      padding: 170px 0 0;
+
+      width: 59%;
+    }
   }
   &__title {
     position: relative;
+    margin-bottom: 20px;
 
-    margin-bottom: 30px;
     display: block;
     max-width: 490px;
 
@@ -124,6 +130,15 @@ html {
     color: rgb(0,0,0);
     font: normal 800 34px $Gilroy; //34() 2 -- 24() 1 -- 18() 1
     letter-spacing: 2px;
+    @media (max-width: 1300px) {
+      margin-bottom: 12px;
+
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+    @media (max-width: 320px) {
+      font-size: 18px;
+    }
 
     &:before {
       position: absolute;
@@ -144,6 +159,14 @@ html {
       display: block;
 
       font-size: 45px; // 45() 2 -- 30() 2 -- 24() 1
+      @media (max-width: 1300px) {
+        font-size: 30px;
+        letter-spacing: 2px;
+      }
+      @media (max-width: 320px) {
+        font-size: 24px;
+        letter-spacing: 1px;
+      }
     }
   }
 
@@ -154,12 +177,20 @@ html {
   &__description {
     position: relative;
 
-    margin-bottom: 100px;
+    margin-bottom: 95px;
 
     color: rgb(20,20,20);
-    font: normal 300 1rem/1.3 $Gilroy; // 18(24) 1 -- 16(24) 1 -- 14(18) 1
+    font: normal 300 18px/24px $Gilroy;
     letter-spacing: 1px;
+    @media (max-width: 1300px) {
+      margin-bottom: 70px;
 
+      font-size: 16px;
+    }
+    @media (max-width: 320px) {
+      font-size: 18px;
+      line-height: 18px;
+    }
     &:after {
       position: absolute;
       bottom: -102%;
@@ -184,6 +215,9 @@ html {
   overflow: hidden;
 
   padding: 165px 0 215px;
+  @media (max-width: 1300px) {
+    padding: 115px 0 174px;
+  }
 
   &:after {
     position: absolute;
@@ -197,6 +231,11 @@ html {
 
     content: '';
     background-color: #f8f8f8;
+    @media (max-width: 1300px) {
+      left: -64%;
+
+      width: 220%;
+    }
   }
 
   &__wrapper {
@@ -232,6 +271,11 @@ html {
 
   &__title {
     max-width: 360px;
+    @media (max-width: 1300px) {
+      margin-bottom: 60px;
+
+      max-width: 260px;
+    }
   }
   &__list {
 
@@ -244,71 +288,17 @@ html {
     flex-flow: row nowrap;
     justify-content: flex-end;
     align-items: center;
-
-    &:nth-child(even) {
-      flex-flow: row-reverse nowrap;
-      .situation__item--number {
-        right: auto;
-        left: 0;
-      }
-      .situation__item--text {
-        max-width: 311px;
-      }
-      .situation__item--img {
-        margin: 0 35px 0 0;
+    @media (max-width: 1300px) {
+      margin-bottom: 55px;
+      &:last-child {
+        margin: 0;
       }
     }
 
-    &:nth-child(1) {
-      margin-bottom: 80px;
-      .situation__item--img {
-
-      }
-      .situation__item--number {
-        top: 48px;
-        right: 419px;
-      }
-      .situation__item--text {
-        position: relative;
-
-        max-width: 282px;
-        &:after {
-          position: absolute;
-          bottom: -47%;
-          right: -21%;
-
-          display: block;
-          width: 145px;
-          height: 19px;
-          content: "";
-
-          background: transparent url($url + "icons/wave.svg") 50% 50% no-repeat;
-        }
-      }
+    &--description {
+      position: relative;
     }
 
-    &:nth-child(2) {
-      .situation__item--number {
-        top: 22px;
-        left: 400px;
-      }
-    }
-
-    &:nth-child(3) {
-      margin-top: -60px;
-
-      .situation__item--number {
-        top: 128px;
-        right: 300px;
-      }
-    }
-
-    &:nth-child(4) {
-      .situation__item--number {
-        top: 53px;
-        left: 522px;
-      }
-    }
     &--number {
       position: absolute;
       top: 0;
@@ -325,8 +315,18 @@ html {
     &--text {
       max-width: 396px;
 
+      font: normal 300 18px/28px $Gilroy;
+      letter-spacing: 1px;
       color: rgb(27,27,27);
-      letter-spacing: 0.1rem;
+
+      @media (max-width: 1300px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      @media (max-width: 320px) {
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
 
     &--img-wrapper {
@@ -351,18 +351,92 @@ html {
     &--img {
       margin: 0 0 0 35px;
     }
+
+    &:nth-child(even) {
+      flex-flow: row-reverse nowrap;
+      .situation__item--number {
+        right: auto;
+        left: 0;
+      }
+      .situation__item--text {
+        max-width: 311px;
+      }
+      .situation__item--img {
+        margin: 0 35px 0 0;
+      }
+    }
+
+    &:nth-child(1) {
+      margin-bottom: 80px;
+      @media (max-width: 1300px) {
+        margin-bottom: 55px;
+      }
+      .situation__item--img {
+
+      }
+      .situation__item--number {
+        top: -76%;
+        right: -26%;
+      }
+      .situation__item--text {
+        position: relative;
+
+        max-width: 282px;
+        &:after {
+          position: absolute;
+          bottom: -47%;
+          right: -21%;
+
+          display: block;
+          width: 145px;
+          height: 19px;
+          content: "";
+
+          background: transparent url($url + "icons/wave.svg") 50% 50% no-repeat;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .situation__item--number {
+        top: -138%;
+        left: -22%;
+      }
+    }
+
+    &:nth-child(3) {
+      margin-top: -60px;
+      @media (max-width: 1300px) {
+        margin-top: 0;
+      }
+
+      .situation__item--number {
+        top: -105%;
+        right: -20%;
+      }
+    }
+
+    &:nth-child(4) {
+      .situation__item--number {
+        top: -65%;
+        left: -23%;
+      }
+    }
   }
 }
 
 .about-us {
   position: relative;
   margin-top: -70px;
-  padding: 225px 0 238px;
-  //margin-top: -220px;
+  padding-bottom: 238px;
 
   display: flex;
   flex-flow: row nowrap;
+  justify-content: flex-end;
   overflow: hidden;
+  @media (max-width: 1300px) {
+    padding-bottom: 238px;
+  }
   &:after {
     position: absolute;
     bottom: 11%;
@@ -376,20 +450,27 @@ html {
     background: transparent url($url + "icons/wave.svg") 50% 50% no-repeat;
   }
 
-  &__wrapper {
-    padding-right: 270px;
+  &__content {
+    padding-top: 225px;
+    margin-right: -10%;
 
-    position: relative;
-    width: 100%;
-    /*display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-start;*/
+    width: 44%;
+    @media (max-width: 1300px) {
+      padding-top: 195px;
+
+      width: 46%;
+    }
   }
 
   &__title {
-    margin-bottom: 96px;
+    margin-bottom: 103px;
 
     max-width: 495px;
+    @media (max-width: 1300px) {
+      margin-bottom: 63px;
+
+      max-width: 340px;
+    }
   }
 
   &__line {
@@ -400,6 +481,9 @@ html {
     padding-left: 20px;
     display: flex;
     flex-flow: row nowrap;
+    @media (max-width: 1300px) {
+      padding: 0;
+    }
   }
 
   &__item {
@@ -408,8 +492,15 @@ html {
     margin-right: 30px;
 
     color: rgb(20,20,20);
-    font: normal 300 1rem/1.6 $Gilroy; // 18(28) 1 -- 16(24) 1 -- 14(24) 1
-    letter-spacing: 0.1rem;
+    font: normal 300 18px/28px $Gilroy; // 18(28) 1 -- 16(24) 1 -- 14(24) 1
+    letter-spacing: 1px;
+    @media (max-width: 1300px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    @media (max-width: 320px) {
+      font-size: 14px;
+    }
 
     &:last-child {
       margin: 0;
@@ -435,24 +526,24 @@ html {
         border-radius: 22px;
 
         background-color: #f5f5f5;
+        @media (max-width: 1300px) {
+          left: 0;
+        }
       }
     }
   }
   &__img {
-    position: absolute;
-    top: -245px;
-    right: -502px;
-    /*margin-right: -50%;
-    margin-left: -10%;*/
+    margin-right: -4%;
 
-    display: block;
-    width: 1018px;
-    height: 608px;
-    /*width: auto;
-    height: 100%;*/
+    width: 50%;
 
     background: transparent url($url + "d_about.png") 50% 50% no-repeat;
     background-size: contain;
+    @media (max-width: 1300px) {
+      margin-right: -10%;
+
+      width: 52%;
+    }
   }
 }
 
@@ -596,7 +687,7 @@ html {
 
     width: 37%;
 
-    background: transparent url($url + "d_bigben.png") 50% 0 no-repeat;
+    background: transparent url($url + "d_bigben.png") 100% 0 no-repeat;
     background-size: cover;
 
     &:before {
@@ -821,7 +912,7 @@ html {
     &:nth-child(3) {
       &:after {
         top: 64px;
-        left: 215px;
+        left: 14px;
 
         content: "практика";
       }
@@ -1042,7 +1133,7 @@ html {
     position: relative;
     padding: 124px 0 40px;
 
-    width: 24%;
+    width: 27%;
     display: flex;
     flex-flow: column nowrap;
     &:before {

@@ -9,9 +9,9 @@
     <title>Document</title>
 </head>
 <body>
-<header class="main-container">
-    <div class="wrapper header">
-        <div class="header__wrapper">
+<header class="header">
+    <div class="wrapper header__wrapper">
+        <div class="header__menu">
             <a href="" class="logo" title="YES logo">
                 <span class="logo__dot">.</span>
                 <span class="logo__text">YES</span>
@@ -33,7 +33,6 @@
                 </h2>
                 <button class="button" type="button">Записаться на пробное занятие</button>
             </div>
-
         </div>
     </div>
 </header>
@@ -43,8 +42,10 @@
             <h3 class="section-title section-title--question situation__title">Бывали ли вы  в подобных ситауциях</h3>
             <div class="situation__list">
                 <div class="situation__item">
-                    <span class="situation__item--number">01<strong class="situation__item--number_strong">.</strong></span>
-                    <p class="section__list--description situation__item--text">Вы думали, что знаете английский, но в гостинице  с трудом выговариваете, какой номер вам нужен</p>
+                    <div class="situation__item--description">
+                        <span class="situation__item--number">01<strong class="situation__item--number_strong">.</strong></span>
+                        <p class="situation__item--text">Вы думали, что знаете английский, но в гостинице  с трудом выговариваете, какой номер вам нужен</p>
+                    </div>
                     <picture class="situation__item--img">
                         <source media="(max-width: 320px)" srcset="assets/images/situations/m_situation_1.png">
                         <source media="(max-width: 1300px)" srcset="assets/images/situations/t_situation_1.png">
@@ -52,8 +53,10 @@
                     </picture>
                 </div>
                 <div class="situation__item">
-                    <span class="situation__item--number">02<strong class="situation__item--number_strong">.</strong></span>
-                    <p class="section__list--description situation__item--text">Вы смогли спросить,  до какой станции метро нужно дойти, но не поняли, куда вас отправили</p>
+                    <div class="situation__item--description">
+                        <span class="situation__item--number">02<strong class="situation__item--number_strong">.</strong></span>
+                        <p class="situation__item--text">Вы смогли спросить,  до какой станции метро нужно дойти, но не поняли, куда вас отправили</p>
+                    </div>
                     <picture class="situation__item--img">
                         <source media="(max-width: 320px)" srcset="assets/images/situations/m_situation_2.png">
                         <source media="(max-width: 1300px)" srcset="assets/images/situations/t_situation_2.png">
@@ -61,8 +64,10 @@
                     </picture>
                 </div>
                 <div class="situation__item">
-                    <span class="situation__item--number">03<strong class="situation__item--number_strong">.</strong></span>
-                    <p class="section__list--description situation__item--text">В аэропорту при любом подозрении  на задрежку, вы ищите представителя, хоть как-то говорящего по-русски</p>
+                    <div class="situation__item--description">
+                        <span class="situation__item--number">03<strong class="situation__item--number_strong">.</strong></span>
+                        <p class="situation__item--text">В аэропорту при любом подозрении  на задрежку, вы ищите представителя, хоть как-то говорящего по-русски</p>
+                    </div>
                     <picture class="situation__item--img">
                         <source media="(max-width: 320px)" srcset="assets/images/situations/m_situation_3.png">
                         <source media="(max-width: 1300px)" srcset="assets/images/situations/t_situation_3.png">
@@ -70,8 +75,10 @@
                     </picture>
                 </div>
                 <div class="situation__item">
-                    <span class="situation__item--number">в итоге...</span>
-                    <p class="section__list--description situation__item--text">Все это портит впечатление  от отдыха и отбивает желание посещать новые страны</p>
+                    <div class="situation__item--description">
+                        <span class="situation__item--number">в итоге...</span>
+                        <p class="situation__item--text">Все это портит впечатление  от отдыха и отбивает желание посещать новые страны</p>
+                    </div>
                     <picture class="situation__item--img">
                         <source media="(max-width: 320px)" srcset="assets/images/situations/m_situation_4.png">
                         <source media="(max-width: 1300px)" srcset="assets/images/situations/t_situation_4.png">
@@ -82,7 +89,7 @@
         </div>
     </section>
     <section class="about-us">
-        <div class="wrapper about-us__wrapper">
+        <div class="about-us__content">
             <h3 class="section-title--line about-us__title">Мы предусмотрели эти ситуации</h3>
             <!--<hr class="line about-us__line">-->
             <dl class="about-us__list">
@@ -99,8 +106,8 @@
                     <dd class="about-us__item--description">Проводим диалоги  с преподавателями  и носителями языка</dd>
                 </div>
             </dl>
-            <div class="about-us__img"></div>
         </div>
+        <div class="about-us__img"></div>
     </section>
     <section class="instructors">
         <div class="wrapper instructors__wrapper">
