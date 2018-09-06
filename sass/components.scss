@@ -2,19 +2,24 @@
 @import "colors.scss";
 @import "mixins.scss";
 
+$desktop: 60%;
+$tablet-first: 55.4%; // < 1300
+$tablet: 70%; // < 980
+$mobile-first: 80%; // < 780
+$mobile: 90%;
+
+
 .wrapper {
-  max-width: 60%;
-  //max-width: 1140px;
+  max-width: $desktop;
   margin: 0 auto;
   @media (max-width: 1300px) {
-    //max-width: 55.4%;
-    max-width: 720px;
+    max-width: $tablet-first;
   }
   @media (max-width: 980px) {
-    max-width: 70%;
+    max-width: $tablet;
   }
   @media (max-width: 780px) {
-    max-width: 80%;
+    max-width: $mobile-first;
   }
 }
 .info-text {
