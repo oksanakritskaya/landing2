@@ -6,7 +6,7 @@ $desktop: 60%;
 $tablet-first: 55.4%; // < 1300
 $tablet: 70%; // < 980
 $mobile-first: 80%; // < 780
-$mobile: 90%;
+$mobile: 90%; // < 460
 
 
 .wrapper {
@@ -20,6 +20,9 @@ $mobile: 90%;
   }
   @media (max-width: 780px) {
     max-width: $mobile-first;
+  }
+  @media (max-width: 460px) {
+    max-width: $mobile;
   }
 }
 .info-text {
@@ -122,7 +125,7 @@ $mobile: 90%;
     width: 64px;
     padding-bottom: 20px;
     border-bottom: 7px solid $red-dark;
-    @media (max-width: 640px) {
+    @media (max-width: 700px) {
       margin: 0 auto;
     }
   }

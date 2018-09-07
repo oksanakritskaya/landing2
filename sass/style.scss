@@ -14,7 +14,6 @@ html {
 
 .header {
   overflow: hidden;
-  /*height: 100vh;*/
   position: relative;
   display: flex;
   flex-flow: column nowrap;
@@ -30,7 +29,6 @@ html {
     content: 'english yes';
 
     color: rgba(233,233,233, 0.3);
-    //font-size: 372px;
     font: normal 800 18.3vw $Gilroy;
     letter-spacing: 9px;
     white-space: nowrap;
@@ -54,6 +52,15 @@ html {
     flex-flow: row nowrap;
     align-items: center;
     list-style-type: none;
+    @media (max-width: 1150px) {
+      max-width: 75%;
+
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    @media (max-width: 670px) {
+      max-width: none;
+    }
     @media (max-width: 580px) {
       flex-direction: column;
     }
@@ -61,10 +68,19 @@ html {
       margin-right: 40px;
 
       display: inline-block;
-      @media (max-width: 980px) {
-        margin-right: 10px;
+      @media (max-width: 1300px) {
+        margin-right: 20px;
       }
-      @media (max-width: 900px) {
+      @media (max-width: 1150px) {
+        margin: 0;
+        &:first-child {
+          margin-right: 20px;
+        }
+      }
+      @media (max-width: 980px) {
+        //margin-right: 10px;
+      }
+      @media (max-width: 670px) {
         margin-right: 20px;
 
         &:first-child {
@@ -77,6 +93,12 @@ html {
 
       &:last-child {
         margin: 0;
+        @media (max-width: 1150px) {
+          width: 35%;
+        }
+        @media (max-width: 670px) {
+          width: auto;
+        }
       }
     }
   }
@@ -89,9 +111,10 @@ html {
 
   display:flex;
   flex-flow: row nowrap;
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   &__img {
@@ -119,16 +142,37 @@ html {
       margin-left: (100% - $tablet-first) / 2 - 7;
 
       width: 33%;
-    }
-    @media (max-width: 940px) {
-      margin-left: -20%;
 
-      width: 70%;
+      background: transparent url($url + "t_bus.png") 50% 0 no-repeat;
+      background-size: contain;
     }
-    @media (max-width: 600px) {
-      margin: 0 0 0 0;
-      width: 100%;
-      height: 500px;
+    @media (max-width: 1150px) {
+      margin-left: (100% - $tablet-first) / 2 - 10;
+
+      width: 38%;
+    }
+    @media (max-width: 980px) {
+      margin-left: (100% - $tablet) / 2 - 10;
+
+      width: 58%;
+    }
+    @media (max-width: 780px) {
+      margin-left: (100% - $mobile-first) / 2 - 10;
+
+      width: 58%;
+    }
+    @media (max-width: 700px) {
+      margin: 0;
+      width: 80vw;
+      height: 488px / 365px * 80vw;
+    }
+    @media (max-width: 460px) {
+      width: 90vw;
+      height: 488px / 365px * 90vw;
+    }
+    @media (max-width: 400px) {
+      background: transparent url($url + "m_bus.png") 50% 0 no-repeat;
+      background-size: contain;
     }
 
     &:after {
@@ -171,18 +215,22 @@ html {
       //padding: 10% 0 0;
     }
     @media (max-width: 1300px) {
-      padding: 170px 0 0;
-
+      margin-right: (100% - $tablet-first) / 2;
+      padding: 13% 0 2%;
     }
-    @media (max-width: 940px) {
-      padding-top: 145px;
-
+    @media (max-width: 1150px) {
+      padding: 11% 0 0;
     }
-    @media (max-width: 690px) {
-      padding-top: 100px;
+    @media (max-width: 980px) {
+      margin-right: (100% - $tablet) / 2;
+      //padding-top: 145px;
     }
-    @media (max-width: 600px) {
-      width: 100%;
+    @media (max-width: 780px) {
+      margin-right: (100% - $mobile-first) / 2;
+    }
+    @media (max-width: 700px) {
+      //width: 100%;
+      margin: 0;
     }
   }
   &__title {
@@ -257,7 +305,7 @@ html {
 
       font-size: 16px;
     }
-    @media (max-width: 1000px) {
+    @media (max-width: 1300px) {
       margin-bottom: 30px;
     }
     @media (max-width: 320px) {
@@ -436,6 +484,7 @@ html {
       }
       @media (max-width: 640px) {
         max-width: none;
+        margin-bottom: 20px;
       }
       @media (max-width: 320px) {
         font-size: 14px;
@@ -595,7 +644,7 @@ html {
     @media (max-width: 780px) {
       margin-left: (100% - $mobile-first) / 2;
     }
-    @media (max-width: 640px) {
+    @media (max-width: 700px) {
       margin: 0 auto;
       padding-top: 0;
 
@@ -626,6 +675,9 @@ html {
     @media (max-width: 1300px) {
       padding: 0;
     }
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -650,6 +702,11 @@ html {
 
       margin-right: 20px;
     }
+    @media (max-width: 600px) {
+      margin: 0 0 30px 0;
+
+      text-align: center;
+    }
     @media (max-width: 320px) {
       font-size: 14px;
     }
@@ -664,6 +721,9 @@ html {
       margin-bottom: 10px;
 
       font-weight: 900;
+      @media (max-width: 600px) {
+        display: inline-block;
+      }
 
       &:before {
         position: absolute;
@@ -696,7 +756,13 @@ html {
 
       width: 47%;
     }
-    @media (max-width: 640px) {
+    @media (max-width: 1300px) {
+      width: 55%;
+    }
+    @media (max-width: 780px) {
+      width: 75%;
+    }
+    @media (max-width: 700px) {
       display: none;
     }
   }
@@ -900,6 +966,9 @@ html {
     @media (max-width: 1300px) {
       width: 61%;
     }
+    @media (max-width: 1050px) {
+      width: 78%;
+    }
     @media (max-width: 640px) {
       width: 80vw;
       height: 1078px / 749px * 80vw;
@@ -946,18 +1015,19 @@ html {
   }
   &__text {
     padding: 135px 0 35px;
-    margin-right: 20%;
+    margin-right: (100% - $desktop) / 2;
 
     flex-grow: 0;
+
     @media (max-width: 1300px) {
-      margin-right: 22.3%;
+      margin-right: (100% - $tablet-first) / 2;
       padding: 32px 0 35px;
     }
     @media (max-width: 980px) {
-      margin-right: 15%;
+      margin-right: (100% - $tablet) / 2;
     }
     @media (max-width: 780px) {
-      margin-right: 10%;
+      margin-right: (100% - $mobile-first) / 2;
     }
     @media (max-width: 640px) {
       margin: 0 auto;
@@ -1024,6 +1094,12 @@ html {
   &__list {
     display: flex;
     flex-flow: row nowrap;
+    @media (max-width: 640px) {
+      justify-content: space-between;
+    }
+    @media (max-width: 470px) {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -1039,6 +1115,13 @@ html {
     @media (max-width: 1300px) {
       font-size: 16px;
       line-height: 24px;
+    }
+    @media (max-width: 640px) {
+      margin: 0;
+    }
+    @media (max-width: 470px) {
+      max-width: none;
+      width: auto;
     }
     @media (max-width: 320px) {
       font-size: 14px;
@@ -1106,6 +1189,7 @@ html {
     align-items: center;
     @media (max-width: 640px) {
       flex-direction: column;
+      margin-bottom: 40px;
     }
 
     &:last-child {
@@ -1125,6 +1209,8 @@ html {
         line-height: 24px;
       }
       @media (max-width: 640px) {
+        margin-bottom: 20px;
+
         width: 100%;
         max-width: none;
       }
@@ -1153,8 +1239,16 @@ html {
     }
     &--img {
       margin-left: 73px;
-      @media (max-width: 1300px) {
-        margin-left: 0;
+      @media (max-width: 1500px) {
+        margin-left: 20px;
+      }
+      @media (max-width: 640px) {
+        margin: 0;
+
+        width: 100%;
+        img {
+          width: 100%;
+        }
       }
     }
     &:nth-child(even) {
@@ -1167,7 +1261,10 @@ html {
 
       .methods__item--img {
         margin: 0 73px 0 0;
-        @media (max-width: 1300px) {
+        @media (max-width: 1500px) {
+          margin: 0 20px 0 0;
+        }
+        @media (max-width: 640px) {
           margin: 0;
         }
       }
@@ -1321,7 +1418,7 @@ html {
 
   &__wrapper {
     position: relative;
-    @media (max-width: 640px) {
+    @media (max-width: 700px) {
       text-align: center;
     }
     &:before {
@@ -1342,7 +1439,7 @@ html {
       }
     }
 
-    &:after {
+    /*&:after {
       position: absolute;
       top: 13%;
       right: -9%;
@@ -1361,7 +1458,7 @@ html {
       @media (max-width: 1140px) {
         right: -9%;
       }
-    }
+    }*/
   }
 
   &__title {
@@ -1404,6 +1501,10 @@ html {
     @media (max-width: 1300px) {
       padding-bottom: 56px;
     }
+    @media (max-width: 700px) {
+      justify-content: center;
+      text-align: center;
+    }
     @media (max-width: 640px) {
       flex-direction: column;
       align-items: center;
@@ -1418,6 +1519,8 @@ html {
       display: block;
       height: 164px;
       width: 164px;
+      flex-shrink: 0;
+
       @media (max-width: 1300px) {
         margin-right: 27px;
       }
